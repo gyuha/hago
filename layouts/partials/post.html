@@ -1,0 +1,45 @@
+<div class="post-title">
+  <a href="{{ .Permalink }}">
+    <div class="post-meta">
+      <time>{{ i18n "postDatetime" .Date }}</time>
+    </div>
+  </a>
+</div>
+<section class="post-content">
+  <!-- Content -->
+  {{ .Content }}
+</section>
+<time>
+  <i class="far fa-clock"></i>
+  {{ i18n "post_date_time" .Date }}
+</time>
+{{ $baseUrl := .Site.BaseURL }} {{ range.Params.categories }}
+<i class="far fa-folder"></i>
+<a href="{{ $baseUrl }}/categories/{{ . | urlize }}">{{ . }}</a>
+{{ end }} {{ if .Site.Params.comments }}
+<div class="post-comment">
+  {{ template "_internal/disqus.html" . }}
+</div>
+{{ end }} {{ .Site.Params.comments}}
+
+<hr class="summary-sep" />
+<div class="recommend-articles">
+  <h3>
+    {{ i18n "post_recommend_articles"}}
+  </h3>
+  <ul>
+    {{ if .Prev }}
+    <li>
+      <a href="{{ .Prev.Permalink }}" rel="prev">
+        <span>{{ .Prev.Title }}</span>
+      </a>
+    </li>
+    {{ end }} {{ if .Next }}
+    <li>
+      <a href="{{ .Next.Permalink }}" rel="next">
+        <span>{{ .Next.Title }}</span>
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+</div>

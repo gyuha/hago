@@ -1,0 +1,56 @@
+<!-- ***** Footer Area Start ***** -->
+<footer class="footer-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <div class="footer-single-widget">
+          <div class="copywrite-text mt-30">
+            <p>
+              Copyright &copy;
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              All rights reserved
+            </p>
+            <p>made with by Gyuha</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- ***** Footer Area End ***** -->
+
+<script src="/vendor/jquery-2.2.4.min.js"></script>
+<script src="/vendor/bootstrap/popper.min.js"></script>
+<script src="/vendor/bootstrap/bootstrap.min.js"></script>
+<script src="/vendor/native-console.js"></script>
+<script src="/vendor/jquery.easing.1.3.js"></script>
+<script src="/vendor/loading-progress.js"></script>
+<script src="/vendor/jquery.waypoints.min.js"></script>
+<script src="/vendor/jquery.scrollUp.min.js"></script>
+<script src="/vendor/jquery.matchHeight-min.js"></script>
+<script src="/vendor/imagesloaded.pkgd.min.js"></script>
+<script src="/vendor/counterup2.js"></script>
+
+<!-- Active js -->
+<script src="/js/active.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+{{ if not .Site.BuildDrafts }}
+
+<!-- Google Analytics -->
+{{ if .Site.GoogleAnalytics }}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.GoogleAnalytics }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "{{ .Site.GoogleAnalytics }}");
+</script>
+{{ end }} {{ end }}

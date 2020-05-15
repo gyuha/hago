@@ -1,0 +1,62 @@
+# Menu
+- id: menu_blog
+  translation: "블로그"
+
+- id: menu_categories
+  translation: "카테고리"
+
+- id: menu_tags
+  translation: "태그"
+
+- id: menu_projects
+  translation: "프로젝트"
+
+- id: menu_recents
+  translation: "최근글"
+
+- id: menu_burger_title
+  translation: "메뉴"
+
+- id: menu_search_keyword
+  translation: "검색어"
+
+# Footer
+- id: footer_to_the_Top
+  translation: "위로"
+
+# Post
+- id: post_date_time
+  translation: "{{ .Format \"2006년 01월 02일 15시 04분\" }}"
+
+- id: post_toc
+  translation: "목차"
+  
+- id: post_recommend_articles
+  translation: "추천 글"
+
+- id: post_read_more
+  translation: "더보기"
+
+# Category
+- id: categories_description
+  translation: "카테고리 별 글. 최근 글은 타이틀을 클릭해 주세요."
+
+- id: categories_count
+  translation: "개"
+
+# Tag
+- id: tags_description
+  translation: "태그 별 글."
+
+# Not found 404
+- id: not_found_title
+  translation: "잘 못 된 요청입니다__404"
+
+- id: not_found_sub_title
+  translation: "사이트를 다시 확인해 보세요."
+
+- id: not_found_description
+  translation: "링크가 변경되었을 수 있습니다. 태그를 한 번 확인해보세요!! 그 곳에서 찾을 수도 있습니다. :)"
+
+- id: not_found_go_to_home
+  translation: "첫 화면으로"

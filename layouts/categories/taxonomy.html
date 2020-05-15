@@ -1,0 +1,12 @@
+{{ define "main" }}
+<h1><i class="far fa-folder-open"></i> {{ i18n "menu_categories" }}: {{ .Title }}</h1>
+<!-- posts -->
+{{ range .Paginator.Pages }}
+<!-- summary -->
+{{ .Render "summary"}} {{ end }} {{ partial "pagination.html" . }}
+<!-- posts end -->
+{{ end }} {{ define "side" }}
+<!-- category -->
+{{ partial "side_category.html" . }}
+<!-- tags -->
+{{ partial "side_tags.html" . }} {{ end }}

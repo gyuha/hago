@@ -1,0 +1,51 @@
+<!-- Preloader Start -->
+<div id="preloader">
+  <div class="preload-content">
+    <div id="loading-progress"></div>
+  </div>
+</div>
+<!-- Preloader End -->
+
+<!-- ***** Header Start ***** -->
+<header class="header-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nav class="navbar navbar-expand-lg">
+          <!-- Logo -->
+          <a class="navbar-brand" href='{{ "/" | relURL }}'>
+            <img src="{{ .Site.Params.logo | relURL }}" alt="Logo" />
+          </a>
+          <!-- Navbar Toggler -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Navbar -->
+          <div class="collapse navbar-collapse" id="nav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href='{{ "/" | relURL }}'>{{ i18n "menu_blog" }}</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href='{{ "/categories" | relURL }}'>{{ i18n "menu_categories" }}</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href='{{ "/tags" | relURL }}'>{{ i18n "menu_tags" }}</a>
+              </li>
+            </ul>
+            <!-- Search Form  -->
+            <div id="search-wrapper">
+              <form action="https://google.com/search">
+                <input type="text" name="q" id="search" placeholder="{{ i18n "menu_search_keyword" }}" />
+                <div id="close-icon"></div>
+                <input class="d-none" type="submit" value="" />
+                <input type="hidden" name="sitesearch" value="{{ .Site.BaseURL }}" />
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- ***** Header End ***** -->

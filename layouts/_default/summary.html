@@ -1,0 +1,23 @@
+<article class="post">
+  <div class="post-title">
+    <a href="{{ .Permalink }}" title="{{ .Title }}">
+      <div class="post-meta">
+        <h2>{{ .Title }}</h2>
+        <time>
+          <i class="far fa-clock"></i>
+          {{ i18n "post_date_time" .Date }}
+        </time>
+        {{ $baseUrl := .Site.BaseURL }} {{ range.Params.categories }}
+        <i class="far fa-folder"></i>
+        <a href="{{ $baseUrl }}/categories/{{ . | urlize }}">{{ . }}</a>
+        {{ end }}
+      </div>
+    </a>
+  </div>
+  <div class="post-summary">
+    {{ .Summary | plainify | safeHTML }} {{ if .Truncated }}
+    <a href="{{ .RelPermalink }}" class="summary-more">{{ i18n "post_read_more" }}</a>
+    {{ end }}
+  </div>
+  <hr class="summary-sep" />
+</article>

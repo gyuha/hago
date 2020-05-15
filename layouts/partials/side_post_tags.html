@@ -1,0 +1,11 @@
+<div class="sidebar-widget-area">
+  <div class="title">
+    <i class="fa fa-tag"></i>
+    {{ i18n "menu_tags" }}
+  </div>
+  <div class="widget-content">
+    {{ with.Params.tags }} {{ range . }}
+    <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}" class="badge badge-secondary">{{ . }}</a>
+    {{- end }} {{- end }}
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="top-area">
+  <div class="top-video {{ if .Title }}top-video-small {{ end }}">
+    <video preload="preload" class="video" autoplay="autoplay" loop="loop" muted>
+      <source src="/video/bg.webp" type="video/webp" />
+      <source src="/video/bg.mp4" type="video/mp4" />
+    </video>
+    <div class="container">
+      <div class="title-message">
+        {{ if .Title }}
+        <a href="{{ .Permalink }}">
+          <h1>
+            {{ .Title }}
+          </h1>
+        </a>
+        {{ else }}
+        <a href="/">
+          <h1>
+            {{ .Site.Title }}
+          </h1>
+        </a>
+        <h2>
+          {{ .Site.Params.subtitle }}
+        </h2>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>

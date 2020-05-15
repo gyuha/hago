@@ -1,0 +1,11 @@
+{{ define "main" }}
+<!-- posts -->
+{{ range .Paginator.Pages }}
+<!-- summary -->
+{{ .Render "summary"}} {{ end }} {{ partial "pagination.html" . }}
+<!-- posts end -->
+{{ end }} {{ define "side" }}
+<!-- category -->
+{{ partial "side_category.html" . }}
+<!-- tags -->
+{{ partial "side_tags.html" . }} {{ end }}

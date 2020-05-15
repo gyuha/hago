@@ -1,0 +1,23 @@
+{{ define "main" }}
+
+<div class="tags">
+  <h1>
+    <i class="fa fa-tag"></i>
+    {{ i18n "menu_tags"}}
+  </h1>
+  <p>{{ i18n "tags_description" }}</p>
+  <div class="tag-list">
+    {{ $baseurl := .Site.BaseURL }} {{ $data := .Data }} {{ range $key,$value := .Data.Terms.Alphabetical }}
+    <div class="tag">
+      <i class="fa fa-tag"></i>
+      <a href="{{ $baseurl }}{{ $data.Plural }}/{{ $value.Name | urlize }}"> {{ $value.Name }} <small>({{ $value.Count }})</small> </a>
+    </div>
+    {{ end }}
+  </div>
+</div>
+
+{{ end }} {{ define "side" }}
+<!-- recents-->
+{{- partial "side_recent.html" . -}}
+<!-- category -->
+{{- partial "side_category.html" . -}} {{ end }}

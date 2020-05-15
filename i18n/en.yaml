@@ -1,0 +1,62 @@
+# Menu
+- id: menu_blog
+  translation: "Blog"
+
+- id: menu_categories
+  translation: "Categories"
+
+- id: menu_tags
+  translation: "Tags"
+
+- id: menu_projects
+  translation: "Projects"
+
+- id: menu_recents
+  translation: "Recents"
+
+- id: menu_burger_title
+  translation: "Menu"
+
+- id: menu_search_keyword
+  translation: "Keyword"
+
+# Footer
+- id: footer_to_the_Top
+  translation: "Top"
+
+# Post
+- id: post_date_time
+  translation: "{{ .Format \"Monday, Jan 2, 2006 15:04\" }}"
+
+- id: post_toc
+  translation: "TOC"
+  
+- id: post_recommend_articles
+  translation: "Recommend these articles"
+
+- id: post_read_more
+  translation: "More"
+
+# Category
+- id: categories_description
+  translation: "Read an article by categories. You can read the recent article when you click the title."
+
+- id: categories_count
+  translation: " EA"
+
+# Tag
+- id: tags_description
+  translation: "Read an article by tags."
+
+# Not found 404
+- id: not_found_title
+  translation: "NOT FOUND__404"
+
+- id: not_found_sub_title
+  translation: "While you're here, check the site again."
+
+- id: not_found_description
+  translation: "The link may have changed, please check the tag!! There may be something you want there :)"
+
+- id: not_found_go_to_home
+  translation: "Go to the main"

@@ -1,0 +1,33 @@
+{{ define "main" }}
+<div class="categories">
+  <h1>
+    <i class="far fa-folder-open"></i>
+    {{ i18n "menu_categories" }}
+  </h1>
+  <p>{{ i18n "categories_description" }}</p>
+  <ul>
+    {{ $baseurl := .Site.BaseURL }} {{ $data := .Data }} {{ range $key,$value := .Data.Terms.Alphabetical }}
+    <li>
+      <span class="title">
+        <a href="{{ $baseurl }}{{ $data.Plural }}/{{ $value.Name | urlize }}">
+          <i class="far fa-folder" aria-hidden="true"></i>
+          {{ upper $value.Name }} ({{ $value.Count }}{{ i18n "categories_count" }})
+        </a>
+      </span>
+      <span class="links">
+        {{ range first 1 $value.WeightedPages }}
+        <a href="{{ .Permalink }}">
+          <small>{{ .Date.Format "2006-01-02" }}</small>
+          <span class="recent-title">{{ .Name }}</span>
+        </a>
+        {{ end }}
+      </span>
+    </li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }} {{ define "side" }}
+<!-- recents-->
+{{- partial "side_recent.html" . -}}
+<!-- category -->
+{{- partial "side_tags.html" . -}} {{ end }}

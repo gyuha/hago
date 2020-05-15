@@ -1,0 +1,13 @@
+{
+  "name": "hago",
+  "version": "1.0.0",
+  "description": "Hago is a simple blog theme for hugo.",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run sass",
+    "sass": "node-sass --watch scss/style.scss static/css/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

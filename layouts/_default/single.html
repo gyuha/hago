@@ -1,0 +1,7 @@
+{{ define "main" }}
+<!-- post -->
+{{ partial "post.html" . }} {{ end }} {{ define "side" }}
+<!-- TOC -->
+{{- partial "side_toc.html" . -}}
+<!-- category -->
+{{- partial "side_post_tags.html" . -}} {{ end }}

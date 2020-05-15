@@ -36,11 +36,11 @@
             <!-- Search Form  -->
             <div id="search-wrapper">
               <form action="https://google.com/search">
-                <input type="text" name="q" id="search" placeholder="{{ i18n "menu_search_keyword" }}" />
-                <div id="close-icon"></div>
-                <input class="d-none" type="submit" value="" />
+                <input type="search" placeholder='{{ i18n "menu_search_keyword" }}' name="q" class="search">
+                <i class="fa fa-search"></i>
                 <input type="hidden" name="sitesearch" value="{{ .Site.BaseURL }}" />
               </form>
+              </div>
             </div>
           </div>
         </nav>

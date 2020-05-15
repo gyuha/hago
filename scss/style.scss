@@ -185,10 +185,12 @@ img {
   @media #{$breakpoint-md} {
     bottom: 30px;
     right: 30px;
+    opacity: 0.6;
   }
   @media #{$breakpoint-xs} {
     bottom: 30px;
     right: 30px;
+    opacity: 0.6;
   }
 }
 
@@ -504,242 +506,59 @@ img {
 /*---------------------
  * Search bar 
  *--------------------*/
-#search-wrapper {
+form {
   display: inline-block;
-  position: relative;
-  @media #{$breakpoint-md} {
-    margin-top: 15px;
-    padding-left: 1em;
-  }
-  @media #{$breakpoint-xs} {
-    margin-top: 15px;
-    padding-left: 1em;
-  }
-  &.search-expanded {
-    #close-icon {
-      &:before {
-        @include animation(cross-1-in 0.25s linear 0s forwards);
-      }
-      &:after {
-        @include animation(cross-2-in 0.25s linear 0.2s forwards);
-      }
-    }
-    &:after {
-      @include animation(lens-out 0.5s linear 1 forwards);
-    }
-  }
-  &:after {
-    position: absolute;
-    bottom: 3px;
-    right: -9px;
-    display: block;
-    content: "";
-    width: 14px;
-    height: 2px;
-    background-color: $text-color;
-    @include transform(rotate(45deg) scaleX(0));
-    transform-origin: 0 50%;
-    @include animation(lens-in 0.6s linear 0.9s forwards);
-  }
-  #search {
-    color: $color-white;
-    background: none;
-    border: 2px solid;
-    border-color: $text-color;
-    outline: none;
-    padding: 0 9px;
-    border-radius: 1000px;
-    width: 0;
-    transition: all 0.3s 0.6s;
-    font-size: 12px;
-    &::-webkit-input-placeholder {
-      color: rgba(#fff, 0.6);
-    }
-    &:focus {
-      width: 300px;
-      padding: 7px 15px;
-      @media #{$breakpoint-xs} {
-        width: 200px;
-      }
-    }
-  }
-  #close-icon {
-    cursor: pointer;
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    width: 20px;
-    height: 20px;
-    @include transform(translateY(-1px));
-    transition: 0.2s all;
+  transform: translate(0, 0);
+  transition: all 1s;
+  color: $color-nav-bar-text;
+  width: 35px;
+  height: 35px;
+  box-sizing: border-box;
+  border-radius: 18px;
+
+  input {
+    width: 100%;
+    height: 36px;
+    line-height: 30px;
+    outline: 0;
+    border: 0;
     display: none;
-    &[style*="display: block"] {
-      color: red;
-      &:before {
-        @include transform(rotate(45deg) scaleX(1) translateY(10px));
-      }
-      &:after {
-        @include transform(rotate(-45deg) scaleX(1) translateY(-10px));
-      }
-    } // cross
-    &:before,
-    &:after {
-      display: block;
-      content: "";
-      position: absolute;
-      width: 20px;
-      height: 2px;
-      background-color: $text-color;
-      transform-origin: 100% 50%;
-    }
-    &:before {
-      @include transform(rotate(45deg) scaleX(0) translateY(10px));
-    }
-    &:after {
-      @include transform(rotate(-45deg) scaleX(0) translateY(-10px));
-    }
-    &.closing {
-      &:before {
-        @include animation(cross-1-out 0.25s linear 0s forwards);
-      }
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 20px;
+  }
 
-      &:after {
-        @include animation(cross-2-out 0.25s linear 0.2s forwards);
-      }
-    }
+  .fa {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    color: $color-nav-bar-text;
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 0.2s;
   }
-}
 
-// Animations
-@-webkit-keyframes lens-out {
-  0% {
-    @include transform(rotate(45deg) scaleX(1));
+  &:hover {
+    width: 200px;
+    cursor: pointer;
   }
-  30% {
-    @include transform(rotate(45deg) scaleX(1.4));
-  }
-  100% {
-    @include transform(rotate(45deg) scaleX(0));
-  }
-}
 
-@keyframes lens-out {
-  0% {
-    @include transform(rotate(45deg) scaleX(1));
+  &:hover input {
+    display: block;
   }
-  30% {
-    @include transform(rotate(45deg) scaleX(1.4));
-  }
-  100% {
-    @include transform(rotate(45deg) scaleX(0));
-  }
-}
 
-@-webkit-keyframes lens-in {
-  0% {
-    @include transform(rotate(45deg) scaleX(0));
-  }
-  30% {
-    @include transform(rotate(45deg) scaleX(1.4));
-  }
-  100% {
-    @include transform(rotate(45deg) scaleX(1));
-  }
-}
-
-@keyframes lens-in {
-  0% {
-    @include transform(rotate(45deg) scaleX(0));
-  }
-  30% {
-    @include transform(rotate(45deg) scaleX(1.4));
-  }
-  100% {
-    @include transform(rotate(45deg) scaleX(1));
-  }
-}
-
-@-webkit-keyframes cross-1-in {
-  0% {
-    @include transform(rotate(45deg) scaleX(0) translateY(10px));
-  }
-  70% {
-    @include transform(rotate(45deg) scaleX(1.2) translateY(10px));
-  }
-  100% {
-    @include transform(rotate(45deg) scaleX(1) translateY(10px));
-  }
-}
-
-@keyframes cross-1-in {
-  0% {
-    @include transform(rotate(45deg) scaleX(0) translateY(10px));
-  }
-  70% {
-    @include transform(rotate(45deg) scaleX(1.2) translateY(10px));
-  }
-  100% {
-    @include transform(rotate(45deg) scaleX(1) translateY(10px));
-  }
-}
-
-@-webkit-keyframes cross-2-in {
-  0% {
-    @include transform(rotate(-45deg) scaleX(0) translateY(-10px));
-  }
-  70% {
-    @include transform(rotate(-45deg) scaleX(1.2) translateY(-10px));
-  }
-  100% {
-    @include transform(rotate(-45deg) scaleX(1) translateY(-10px));
-  }
-}
-
-@keyframes cross-2-in {
-  0% {
-    @include transform(rotate(-45deg) scaleX(0) translateY(-10px));
-  }
-  70% {
-    @include transform(rotate(-45deg) scaleX(1.2) translateY(-10px));
-  }
-  100% {
-    @include transform(rotate(-45deg) scaleX(1) translateY(-10px));
-  }
-}
-
-@-webkit-keyframes cross-1-out {
-  0% {
-    @include transform(rotate(45deg) scaleX(1) translateY(10px));
-  }
-  100% {
-    @include transform(rotate(45deg) scaleX(0) translateY(10px));
-  }
-}
-
-@keyframes cross-1-out {
-  0% {
-    @include transform(rotate(45deg) scaleX(1) translateY(10px));
-  }
-  100% {
-    @include transform(rotate(45deg) scaleX(0) translateY(10px));
-  }
-}
-
-@-webkit-keyframes cross-2-out {
-  0% {
-    @include transform(rotate(-45deg) scaleX(1) translateY(-10px));
-  }
-  100% {
-    @include transform(rotate(-45deg) scaleX(0) translateY(-10px));
-  }
-}
-
-@keyframes cross-2-out {
-  0% {
-    @include transform(rotate(-45deg) scaleX(1) translateY(-10px));
-  }
-  100% {
-    @include transform(rotate(-45deg) scaleX(0) translateY(-10px));
+  &:hover .fa {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1em;
+    border: solid white 2px;
+    background: #080738;
+    color: white;
   }
 }
 

@@ -237,11 +237,11 @@ img {
         background-color: #000000;
         padding-bottom: 30px; } }
   .header-area.sticky {
-    background-color: #272822;
+    background-color: #010205cb;
     margin-top: 0;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); }
     .header-area.sticky .navbar {
-      border-color: #272822; }
+      border-color: #010205cb; }
 
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
@@ -468,17 +468,18 @@ form {
     height: 36px;
     font-size: 1.1em;
     border: solid #ffffff 2px;
-    background: #272822;
+    background: #010205cb;
     color: #ffffff; }
 
 /* Footer Area CSS */
 .footer-area {
   margin-top: 3em;
-  background-color: #272822;
+  background-color: #010205cb;
   padding: 30px 0;
   position: relative;
   z-index: 1; }
   .footer-area .footer-single-widget .copywrite-text p {
+    color: #ddd;
     margin-bottom: 0; }
 
 #TableOfContents ul ul {

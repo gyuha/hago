@@ -422,8 +422,9 @@ form {
   .post-content p {
     font-size: 1.1em;
     color: #555;
-    line-height: 1.2em;
-    margin-left: 0.2em; }
+    line-height: 1.5em;
+    margin-left: 0.2em;
+    margin-bottom: 0.8em; }
     .post-content p code {
       border: solid #ddd 1px;
       background-color: #f1f1f1;
@@ -437,7 +438,9 @@ form {
     line-height: 1.2em; }
   .post-content ol,
   .post-content ul {
-    margin: 0 0 20px 40px; }
+    margin: 0 0 20px 40px;
+    line-height: 1.5em;
+    font-size: 1.1em; }
   .post-content ol li {
     list-style: decimal; }
   .post-content ul li {
@@ -450,9 +453,33 @@ form {
     .post-content blockquote p {
       margin-bottom: 0rem; }
   .post-content pre {
-    padding: 1.4em;
+    padding: 20px;
     font-family: "Ubuntu", sans-serif;
-    font-size: 1em; }
+    font-size: 0.9em;
+    background-color: #444444;
+    color: #ffffff; }
+  .post-content table {
+    border-spacing: 0;
+    border-collapse: collapse; }
+    .post-content table thead {
+      display: table-header-group;
+      vertical-align: middle;
+      border-color: inherit;
+      background-color: #ddd; }
+    .post-content table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    .post-content table th,
+    .post-content table td {
+      padding: 6px 13px;
+      border: 1px solid #dfe2e5; }
+    .post-content table code {
+      border: solid #ddd 1px;
+      background-color: #f1f1f1;
+      border-radius: 3px;
+      padding-left: 3px;
+      padding-right: 3px;
+      margin-left: 3px;
+      margin-right: 3px; }
 
 .recommend-articles {
   margin-bottom: 4em; }

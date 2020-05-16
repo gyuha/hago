@@ -6,7 +6,7 @@ license = "MIT"
 licenselink = "https://raw.githubusercontent.com/gyuha/hago/master/LICENSE"
 description = "A minimal Hugo theme.."
 homepage = "http://example.com/"
-tags = [hugo, theme, bootstrap, blog, resonsive, desqus]
+tags = [bootstrap, blog, resonsive, desqus]
 features = []
 min_version = "0.41"
 

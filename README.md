@@ -20,7 +20,6 @@
 - Categories Page
 - Google Analytics
 - Comments
-- Loading progress
 - jQuery 2.2.4
 - Bootstrap 4.4.1
 - Awsome Font 5.8.2

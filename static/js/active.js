@@ -3,13 +3,6 @@
 
     var $window = $(window);
 
-    // Preloader
-    $window.on('load', function () {
-        $('#preloader').fadeOut('slow', function () {
-            $(this).remove();
-        });
-    });
-
     // Sticky Active Code
     $window.on('scroll', function () {
         if ($window.scrollTop() > 20) {

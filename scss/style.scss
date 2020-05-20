@@ -36,7 +36,7 @@ h6 {
   color: $heading-color;
   font-weight: 500;
   line-height: 1.5;
-  margin-top: 0.8em;
+  margin-top: 1.8em;
   &:hover {
     color: $hover-color;
   }
@@ -517,6 +517,7 @@ form {
     margin-top: 1.7em;
     padding-bottom: 0.1em;
     border-bottom: solid 3px $header-line-color;
+    font-size: 3em;
   }
 
   h2,

@@ -27,7 +27,7 @@ h6 {
   color: #000000;
   font-weight: 500;
   line-height: 1.5;
-  margin-top: 0.8em; }
+  margin-top: 1.8em; }
   h1:hover,
   h2:hover,
   h3:hover,
@@ -412,7 +412,8 @@ form {
   .post-content h2 {
     margin-top: 1.7em;
     padding-bottom: 0.1em;
-    border-bottom: solid 3px #ddd; }
+    border-bottom: solid 3px #ddd;
+    font-size: 3em; }
   .post-content h2:before,
   .post-content h3:before {
     display: block;

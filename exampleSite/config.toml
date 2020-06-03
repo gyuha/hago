@@ -1,9 +1,9 @@
 baseURL = "https://YOUR_NAME.github.io/"
-languageCode = "ko-KR"
+languageCode = "en-US"
 title = "YOUR_TITLE"
 theme = "hago"
 
-DefaultContentLanguage = "kr"
+DefaultContentLanguage = "en"
 metaDataFormat = "yaml"
 disqusShortname = "YOUR_DISQUS_SHORT_NAME"
 googleAnalytics = "UA-XXXXXXXXX-X"

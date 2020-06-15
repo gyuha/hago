@@ -1,4 +1,4 @@
-baseURL = "https://YOUR_NAME.github.io/"
+baseURL = "https://www.example.com/"
 languageCode = "en-US"
 title = "YOUR_TITLE"
 theme = "hago"
@@ -19,4 +19,4 @@ paginate = 4
 
 [Author]
   name = "YOUR_NAME"
-  website = "https://YOUR_NAME.github.io"
+  website = "https://www.example.com/"

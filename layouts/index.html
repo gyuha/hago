@@ -1,6 +1,8 @@
 {{ define "main" }}
 <!-- posts -->
-{{ range .Paginator.Pages }} {{ .Render "summary"}} {{ end }} {{ partial "pagination.html" . }}
+{{ range .Paginator.Pages }} {{ .Render "summary"}} {{ end }}
+<!-- pagination -->
+{{ partial "pagination.html" . }}
 <!-- posts end -->
 {{ end }} {{ define "side" }}
 <!-- category -->

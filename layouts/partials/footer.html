@@ -35,7 +35,27 @@
 <script>
   hljs.initHighlightingOnLoad();
 </script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+<script>
+  $(function () {
+    if (window.VANTA) window.VANTA.NET({
+      el: '#waves',
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0x3fa4ff
+    })
+  }) 
+</script>
+
 {{ if not .Site.BuildDrafts }}
+
 
 <!-- Google Analytics -->
 {{ if .Site.GoogleAnalytics }}

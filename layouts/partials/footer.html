@@ -51,7 +51,57 @@
       scaleMobile: 1.00,
       color: 0x3fa4ff
     })
-  }) 
+  })
+  document.addEventListener('DOMContentLoaded', function () {
+    const toc = document.querySelector('#TableOfContents');
+    const content = document.querySelector('.post-content');
+    const headers = content.querySelectorAll('h1, h2, h3, h4, h5, h6');
+
+    // 기존 목차 항목에 toc-item 클래스 추가  
+    toc.querySelectorAll('a').forEach(link => {
+      link.classList.add('toc-item');
+    });
+
+    // 헤더에 ID 부여  
+    headers.forEach((header, index) => {
+      if (!header.id) {
+        header.id = `section-${index}`;
+      }
+    });
+
+    // 스크롤에 따른 하이라이트  
+    function highlightTocItem() {
+      const scrollPosition = window.scrollY;
+      const tocItems = toc.querySelectorAll('.toc-item');
+
+      // 현재 화면에 보이는 첫 번째 헤더 찾기  
+      let activeIndex = -1;
+      for (let i = 0; i < headers.length; i++) {
+        if (headers[i].getBoundingClientRect().top >= 0) {
+          activeIndex = i;
+          break;
+        }
+      }
+
+      // 모든 항목의 하이라이트 제거  
+      tocItems.forEach(item => item.classList.remove('active'));
+
+      // 현재 섹션의 목차 항목 하이라이트  
+      if (activeIndex !== -1) {
+        const activeHeader = headers[activeIndex];
+        const activeLink = toc.querySelector(`a[href="#${activeHeader.id}"]`);
+        if (activeLink) {
+          activeLink.classList.add('active');
+        }
+      } else if (scrollPosition + window.innerHeight >= document.documentElement.scrollHeight) {
+        // 페이지 맨 아래일 경우 마지막 항목 하이라이트  
+        tocItems[tocItems.length - 1].classList.add('active');
+      }
+    }
+
+    window.addEventListener('scroll', highlightTocItem);
+    highlightTocItem(); // 초기 로드 시 실행  
+  });  
 </script>
 
 {{ if not .Site.BuildDrafts }}

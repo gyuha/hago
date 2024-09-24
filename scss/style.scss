@@ -660,3 +660,29 @@ nav {
     }
   }
 }
+
+// 변수 정의  
+$toc-item-color: #333;  
+$toc-item-active-color: #3fa4ff;  
+$toc-item-padding: 5px 0;  
+$toc-transition-duration: 0.3s;  
+
+#TableOfContents {  
+  ul {  
+    list-style-type: none;  
+    padding-left: 0;  
+  }  
+
+  .toc-item {  
+    transition: all $toc-transition-duration ease;  
+    display: block;  
+    padding: $toc-item-padding;  
+    color: $toc-item-color;  
+    text-decoration: none;  
+
+    &.active {  
+      font-weight: bold;  
+      color: $toc-item-active-color;  
+    }  
+  }  
+}  

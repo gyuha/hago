@@ -450,11 +450,32 @@ form {
     .post-content blockquote p {
       margin-bottom: 0rem; }
   .post-content pre {
+    position: relative;
     padding: 20px;
     font-family: "Ubuntu", sans-serif;
     font-size: 0.9em;
     background-color: #444444;
+    border-radius: 5px;
     color: #ffffff; }
+  .post-content pre .copy-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    background-color: #666;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease; }
+  .post-content pre:hover .copy-button {
+    opacity: 1; }
+  .post-content pre .copy-button:hover {
+    background-color: #888; }
+  .post-content pre .copy-button.copied {
+    background-color: #4CAF50; }
   .post-content table {
     border-spacing: 0;
     border-collapse: collapse; }

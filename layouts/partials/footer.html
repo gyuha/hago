@@ -101,7 +101,49 @@
 
     window.addEventListener('scroll', highlightTocItem);
     highlightTocItem(); // 초기 로드 시 실행  
-  });  
+  });
+
+  // 코드 블록 복사 기능
+  document.addEventListener('DOMContentLoaded', function() {
+    // 모든 pre 태그를 찾아서 복사 버튼 추가
+    const codeBlocks = document.querySelectorAll('.post-content pre');
+    
+    codeBlocks.forEach(function(block) {
+      // 복사 버튼 생성
+      const copyButton = document.createElement('button');
+      copyButton.className = 'copy-button';
+      copyButton.textContent = '복사';
+      
+      // 버튼 클릭 이벤트
+      copyButton.addEventListener('click', function() {
+        // 코드 텍스트 가져오기
+        const code = block.querySelector('code');
+        const text = code ? code.textContent : block.textContent;
+        
+        // 클립보드에 복사
+        navigator.clipboard.writeText(text).then(function() {
+          // 성공 시 버튼 텍스트 변경
+          copyButton.textContent = '복사됨!';
+          copyButton.classList.add('copied');
+          
+          // 2초 후 원래 상태로 복구
+          setTimeout(function() {
+            copyButton.textContent = '복사';
+            copyButton.classList.remove('copied');
+          }, 2000);
+        }).catch(function(err) {
+          console.error('복사 실패:', err);
+          copyButton.textContent = '실패';
+          setTimeout(function() {
+            copyButton.textContent = '복사';
+          }, 2000);
+        });
+      });
+      
+      // pre 태그에 버튼 추가
+      block.appendChild(copyButton);
+    });
+  });
 </script>
 
 

@@ -572,11 +572,50 @@ form {
   }
 
   pre {
+    position: relative;
     padding: 20px;
     font-family: $monospace-fonts;
     font-size: 0.9em;
     background-color: $pre-bg-color;
     color: $pre-text-color;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    overflow-x: auto;
+
+    &.mermaid {
+      background-color: #ffffff;
+      border: 1px solid #e0e0e0;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .copy-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 5px 10px;
+      background-color: #ddd;
+      color: #333;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 12px;
+      opacity: 0;
+      @include trans-duration(300ms);
+
+      &:hover {
+        background-color: #ccc;
+      }
+
+      &.copied {
+        background-color: #4CAF50;
+        color: #fff;
+      }
+    }
+
+    &:hover .copy-button {
+      opacity: 1;
+    }
   }
 
   table {

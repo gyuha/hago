@@ -106,7 +106,7 @@
   // 코드 블록 복사 기능
   document.addEventListener('DOMContentLoaded', function() {
     // 모든 pre 태그를 찾아서 복사 버튼 추가
-    const codeBlocks = document.querySelectorAll('.post-content pre');
+    const codeBlocks = document.querySelectorAll('.post-content pre:not(.mermaid)');
     
     codeBlocks.forEach(function(block) {
       // 복사 버튼 생성
@@ -146,6 +146,14 @@
   });
 </script>
 
+
+<!-- Mermaid.js - only loaded when page contains mermaid code blocks -->
+{{ if .Store.Get "hasMermaid" }}
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true });
+</script>
+{{ end }}
 
 <!-- Google Analytics -->
 {{ if .Site.Config.Services.GoogleAnalytics.ID }}

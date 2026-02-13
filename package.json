@@ -4,10 +4,14 @@
   "description": "Hago is a simple blog theme for hugo.",
   "main": "index.js",
   "scripts": {
-    "start": "npm run sass",
-    "sass": "node-sass --watch scss/style.scss static/css/style.css"
+    "start": "npm run sass:watch",
+    "sass:build": "sass scss/style.scss static/css/style.css --no-source-map",
+    "sass:watch": "sass --watch scss/style.scss:static/css/style.css --no-source-map"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.97.3"
+  }
 }

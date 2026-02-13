@@ -745,3 +745,10 @@ $toc-transition-duration: 0.3s;
     }  
   }  
 }  
+
+#post-toc {
+  .widget-content {
+    max-height: calc(100vh - 220px);
+    overflow-y: auto;
+  }
+}

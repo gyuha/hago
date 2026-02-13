@@ -703,3 +703,8 @@ nav .page-item.active .page-link {
   font-weight: bold;
   color: #3fa4ff;
 }
+
+#post-toc .widget-content {
+  max-height: calc(100vh - 220px);
+  overflow-y: auto;
+}

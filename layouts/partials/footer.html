@@ -112,7 +112,8 @@
       // 복사 버튼 생성
       const copyButton = document.createElement('button');
       copyButton.className = 'copy-button';
-      copyButton.textContent = '복사';
+      copyButton.title = '복사';
+      copyButton.innerHTML = '<i class="far fa-copy"></i>';
       
       // 버튼 클릭 이벤트
       copyButton.addEventListener('click', function() {
@@ -122,20 +123,20 @@
         
         // 클립보드에 복사
         navigator.clipboard.writeText(text).then(function() {
-          // 성공 시 버튼 텍스트 변경
-          copyButton.textContent = '복사됨!';
+          // 성공 시 아이콘 변경
+          copyButton.innerHTML = '<i class="fas fa-check"></i>';
           copyButton.classList.add('copied');
           
           // 2초 후 원래 상태로 복구
           setTimeout(function() {
-            copyButton.textContent = '복사';
+            copyButton.innerHTML = '<i class="far fa-copy"></i>';
             copyButton.classList.remove('copied');
           }, 2000);
         }).catch(function(err) {
           console.error('복사 실패:', err);
-          copyButton.textContent = '실패';
+          copyButton.innerHTML = '<i class="fas fa-times"></i>';
           setTimeout(function() {
-            copyButton.textContent = '복사';
+            copyButton.innerHTML = '<i class="far fa-copy"></i>';
           }, 2000);
         });
       });

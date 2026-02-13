@@ -565,6 +565,16 @@ form:hover .fa {
   border-radius: 5px;
   overflow-x: auto;
 }
+.post-content pre code,
+.post-content pre code.hljs {
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+}
+.post-content pre .hljs {
+  background-color: transparent;
+  color: #333;
+}
 .post-content pre.mermaid {
   background-color: #ffffff;
   border: 1px solid #e0e0e0;
@@ -573,25 +583,32 @@ form:hover .fa {
 }
 .post-content pre .copy-button {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  padding: 5px 10px;
-  background-color: #ddd;
-  color: #333;
-  border: none;
-  border-radius: 3px;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.06);
+  color: #888;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 14px;
   opacity: 0;
   -webkit-transition-duration: 300ms;
   transition-duration: 300ms;
 }
 .post-content pre .copy-button:hover {
-  background-color: #ccc;
+  background-color: rgba(0, 0, 0, 0.12);
+  color: #333;
 }
 .post-content pre .copy-button.copied {
   background-color: #4CAF50;
   color: #fff;
+  border-color: #4CAF50;
 }
 .post-content pre:hover .copy-button {
   opacity: 1;

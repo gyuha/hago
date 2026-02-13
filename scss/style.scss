@@ -582,6 +582,18 @@ form {
     border-radius: 5px;
     overflow-x: auto;
 
+    code,
+    code.hljs {
+      background-color: transparent;
+      color: inherit;
+      padding: 0;
+    }
+
+    .hljs {
+      background-color: transparent;
+      color: $pre-text-color;
+    }
+
     &.mermaid {
       background-color: #ffffff;
       border: 1px solid #e0e0e0;
@@ -591,25 +603,32 @@ form {
 
     .copy-button {
       position: absolute;
-      top: 10px;
-      right: 10px;
-      padding: 5px 10px;
-      background-color: #ddd;
-      color: #333;
-      border: none;
-      border-radius: 3px;
+      top: 8px;
+      right: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      padding: 0;
+      background-color: rgba(0, 0, 0, 0.06);
+      color: #888;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
       cursor: pointer;
-      font-size: 12px;
+      font-size: 14px;
       opacity: 0;
       @include trans-duration(300ms);
 
       &:hover {
-        background-color: #ccc;
+        background-color: rgba(0, 0, 0, 0.12);
+        color: #333;
       }
 
       &.copied {
         background-color: #4CAF50;
         color: #fff;
+        border-color: #4CAF50;
       }
     }
 

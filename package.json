@@ -5,13 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run sass",
-    "sass": "sass --watch scss/style.scss static/css/style.css",
-    "sass:once": "sass scss/style.scss static/css/style.css"
+    "sass": "node-sass --watch scss/style.scss static/css/style.css"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "sass": "^1.77.0"
-  }
+  "license": "ISC"
 }

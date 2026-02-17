@@ -27,10 +27,9 @@
             </ul>
             <!-- Search Form  -->
             <div id="search-wrapper">
-              <form action="https://google.com/search">
+              <form action='{{ "/search/" | relURL }}' method="get">
                 <input type="search" placeholder='{{ i18n "menu_search_keyword" }}' name="q" class="search">
                 <i class="fa fa-search"></i>
-                <input type="hidden" name="sitesearch" value="{{ .Site.BaseURL }}" />
               </form>
               </div>
             </div>

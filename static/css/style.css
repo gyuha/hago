@@ -456,14 +456,14 @@ form .fa {
   font-size: 1.2em;
   transition: all 0.2s;
 }
-form:hover {
+form:hover, form:focus-within, form.is-active {
   width: 200px;
   cursor: pointer;
 }
-form:hover input {
+form:hover input, form:focus-within input, form.is-active input {
   display: block;
 }
-form:hover .fa {
+form:hover .fa, form:focus-within .fa, form.is-active .fa {
   width: 36px;
   height: 36px;
   font-size: 1.1em;

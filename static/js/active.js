@@ -27,4 +27,32 @@
             scrollText: '<i class="fa fa-angle-up" aria-hidden="true"></i>'
         });
     }
+
+    var $searchForm = $('#search-wrapper form');
+    var $searchInput = $searchForm.find('input.search');
+    var $searchTrigger = $searchForm.find('.search-trigger');
+
+    var focusSearchInput = function () {
+        window.requestAnimationFrame(function () {
+            $searchInput.trigger('focus');
+        });
+    };
+
+    $searchTrigger.on('click', function (event) {
+        event.preventDefault();
+        $searchForm.addClass('is-active');
+        focusSearchInput();
+    });
+
+    $searchForm.on('mouseenter', function () {
+        if (!$searchInput.is(':focus')) {
+            focusSearchInput();
+        }
+    });
+
+    $searchInput.on('blur', function () {
+        if (!$(this).val()) {
+            $searchForm.removeClass('is-active');
+        }
+    });
 })(jQuery);

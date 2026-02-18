@@ -454,16 +454,22 @@ form {
     transition: all 0.2s;
   }
 
-  &:hover {
+  &:hover,
+  &:focus-within,
+  &.is-active {
     width: 200px;
     cursor: pointer;
   }
 
-  &:hover input {
+  &:hover input,
+  &:focus-within input,
+  &.is-active input {
     display: block;
   }
 
-  &:hover .fa {
+  &:hover .fa,
+  &:focus-within .fa,
+  &.is-active .fa {
     width: 36px;
     height: 36px;
     font-size: 1.1em;

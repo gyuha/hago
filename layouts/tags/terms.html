@@ -7,10 +7,12 @@
   </h1>
   <p>{{ i18n "tags_description" }}</p>
   <div class="tag-list">
-    {{ $baseurl := .Site.BaseURL }} {{ $data := .Data }} {{ range $key,$value := .Data.Terms.Alphabetical }}
+    {{ range $key,$value := .Data.Terms.Alphabetical }}
     <div class="tag">
       <i class="fa fa-tag"></i>
-      <a href="{{ $baseurl }}{{ $data.Plural }}/{{ $value.Name | urlize }}"> {{ $value.Name }} <small>({{ $value.Count }})</small> </a>
+      {{ with $value.Page }}
+      <a href="{{ .RelPermalink }}"> {{ $value.Name }} <small>({{ $value.Count }})</small> </a>
+      {{ end }}
     </div>
     {{ end }}
   </div>

@@ -4,8 +4,8 @@
     {{ i18n "menu_tags" }}
   </div>
   <div class="widget-content">
-    {{ with.Params.tags }} {{ range . }}
-    <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}" class="badge badge-secondary">{{ . }}</a>
+    {{ with .GetTerms "tags" }} {{ range . }}
+    <a href="{{ .RelPermalink }}" class="badge badge-secondary">{{ .LinkTitle }}</a>
     {{- end }} {{- end }}
   </div>
 </div>

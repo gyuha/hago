@@ -37,6 +37,21 @@
 - id: post_read_more
   translation: "More"
 
+- id: note
+  translation: "Note"
+
+- id: tip
+  translation: "Tip"
+
+- id: important
+  translation: "Important"
+
+- id: warning
+  translation: "Warning"
+
+- id: caution
+  translation: "Caution"
+
 # Category
 - id: categories_description
   translation: "Read an article by categories. You can read the recent article when you click the title."

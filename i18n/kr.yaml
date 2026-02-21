@@ -37,6 +37,21 @@
 - id: post_read_more
   translation: "더보기"
 
+- id: note
+  translation: "참고"
+
+- id: tip
+  translation: "팁"
+
+- id: important
+  translation: "중요"
+
+- id: warning
+  translation: "경고"
+
+- id: caution
+  translation: "주의"
+
 # Category
 - id: categories_description
   translation: "카테고리 별 글. 최근 글은 타이틀을 클릭해 주세요."

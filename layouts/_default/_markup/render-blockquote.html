@@ -1,0 +1,33 @@
+{{- $icons := dict
+  "note" "fas fa-info-circle"
+  "tip" "fas fa-lightbulb"
+  "important" "fas fa-comment-alt"
+  "warning" "fas fa-exclamation-triangle"
+  "caution" "fas fa-exclamation-circle"
+-}}
+{{- $koreanLabels := dict
+  "note" "참고"
+  "tip" "팁"
+  "important" "중요"
+  "warning" "경고"
+  "caution" "주의"
+-}}
+{{ if eq .Type "alert" }}
+  <blockquote class="alert alert-{{ .AlertType }}">
+    <p class="alert-heading">
+      <span class="alert-heading-icon"><i class="{{ or (index $icons .AlertType) "fas fa-info-circle" }}" aria-hidden="true"></i></span>
+      <span class="alert-heading-text">
+        {{ with .AlertTitle }}
+          {{ . }}
+        {{ else }}
+          {{ or (index $koreanLabels .AlertType) (or (i18n .AlertType) (title .AlertType)) }}
+        {{ end }}
+      </span>
+    </p>
+    {{ .Text }}
+  </blockquote>
+{{ else }}
+  <blockquote>
+    {{ .Text }}
+  </blockquote>
+{{ end }}

@@ -554,6 +554,62 @@ form:hover .fa, form:focus-within .fa, form.is-active .fa {
 .post-content blockquote p {
   margin-bottom: 0rem;
 }
+.post-content blockquote.alert {
+  --alert-accent: #5551d7;
+  border-left-width: 5px;
+  border-left-style: solid;
+  border-left-color: var(--alert-accent);
+  border-radius: 0;
+  margin: 2.1em 0.1em;
+  padding: 0.15em 0.1em 0.15em 1.25em;
+  color: #000000;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.post-content blockquote.alert .alert-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.55em;
+  font-size: 1.2em;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 1.3;
+  margin: 0 0 0.8em;
+  margin-left: 0;
+}
+.post-content blockquote.alert .alert-heading-icon {
+  width: 1.2em;
+  flex: 0 0 1.2em;
+  text-align: center;
+  line-height: 1;
+  color: var(--alert-accent);
+}
+.post-content blockquote.alert .alert-heading-text {
+  line-height: 1.2;
+  color: var(--alert-accent);
+}
+.post-content blockquote.alert > p {
+  margin-left: 0;
+  margin-bottom: 0.6em;
+}
+.post-content blockquote.alert > p:last-child {
+  margin-bottom: 0;
+}
+.post-content blockquote.alert-note {
+  --alert-accent: #0969da;
+}
+.post-content blockquote.alert-tip {
+  --alert-accent: #0969da;
+}
+.post-content blockquote.alert-important {
+  --alert-accent: #8250df;
+}
+.post-content blockquote.alert-warning {
+  --alert-accent: #9a6700;
+}
+.post-content blockquote.alert-caution {
+  --alert-accent: #cf222e;
+}
 .post-content pre {
   position: relative;
   padding: 20px;

@@ -500,6 +500,17 @@ form:hover .fa, form:focus-within .fa, form.is-active .fa {
   margin-top: 1em;
   margin-bottom: 3em;
 }
+.post-content h1 a,
+.post-content h2 a,
+.post-content h3 a,
+.post-content h4 a,
+.post-content h5 a,
+.post-content h6 a {
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
 .post-content h2 {
   margin-top: 1.7em;
   padding-bottom: 0.1em;

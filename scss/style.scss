@@ -581,9 +581,12 @@ form {
 
   blockquote {
     border-left: solid $blockqute-color thick;
-    margin: 1.5em 0.1em 1.5em 0.5em;
-    padding: 0.4em 0.1em 0.4em 1em;
+    border-radius: 5px;
+    margin: 2em 0.1em 2em 0.5em;
+    padding: 1em 1em 1em 1.7em;
     font-family: $monospace-fonts;
+    background-color: #f9f9f9;
+
     p {
       margin-bottom: 0rem;
     }

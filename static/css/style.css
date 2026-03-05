@@ -503,6 +503,11 @@ form:hover .fa, form:focus-within .fa, form.is-active .fa {
   line-height: 1.2em;
 }
 
+table {
+  margin-bottom: 1.8em;
+  margin-top: 1.8em;
+}
+
 /* Post Content */
 .post-content {
   margin-top: 1em;

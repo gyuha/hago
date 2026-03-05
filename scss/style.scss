@@ -5,7 +5,7 @@
 
 /* :: Import Fonts */
 
-@import url("https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700|Noto+Sans+KR:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css");
 
 /* :: Base CSS */
@@ -227,7 +227,7 @@ img {
       }
       h1 {
         display: block;
-        font-size: 2em;
+        font-size: 1.8em;
         color: $color-title-h1;
         &:hover {
           color: $hover-color;
@@ -235,7 +235,7 @@ img {
       }
       h2 {
         display: block;
-        font-size: 1.5em;
+        font-size: 1.3em;
         color: $color-title-h2;
       }
     }
@@ -507,6 +507,9 @@ form {
     margin-top: 0;
     margin-left: 1.2em;
   }
+  a {
+    line-height: 1.2em;
+  }
 }
 
 /* Post Content */
@@ -527,10 +530,11 @@ form {
   }
 
   h2 {
-    margin-top: 1.7em;
+    margin-top: 1.5em;
     padding-bottom: 0.1em;
     border-bottom: solid 3px $header-line-color;
-    font-size: 1.7em;
+    font-size: 1.3em;
+    font-weight: 500;
   }
 
   h2,
@@ -541,13 +545,15 @@ form {
       height: 75px;
       margin: -75px 0 0;
     }
+    font-size: 1.1em;
+    border-bottom: solid 1px $header-line-color;
   }
 
   p {
     font-size: $post-font-size;
     color: $text-color;
     line-height: $post-line-height;
-    margin-left: 0.2em;
+    margin-left: 1.0em;
     margin-bottom: 0.8em;
     code {
       border: solid #ddd 1px;
@@ -582,8 +588,8 @@ form {
   blockquote {
     border-left: solid $blockqute-color thick;
     border-radius: 5px;
-    margin: 2em 0.1em 2em 0.5em;
-    padding: 1em 1em 1em 1.7em;
+    margin: 2em 0.1em 2em 2.5em;
+    padding: 1em 1em 1em 1em;
     font-family: $monospace-fonts;
     background-color: #f9f9f9;
 
@@ -684,9 +690,12 @@ form {
 
     &.mermaid {
       background-color: #ffffff;
-      border: 1px solid #e0e0e0;
+      // border: 1px solid #e0e0e0;
+      border: none;
       text-align: center;
       padding: 20px;
+      margin-top: 1em;
+      margin-bottom: 1em;
     }
 
     .copy-button {

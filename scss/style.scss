@@ -72,6 +72,12 @@ img {
   max-width: 100%;
 }
 
+@media #{$breakpoint-xl} {
+  .container {
+    max-width: 1440px;
+  }
+}
+
 .bg-img {
   background-position: center center;
   background-size: cover;

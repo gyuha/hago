@@ -49,11 +49,11 @@ a {
   outline: none;
   font-size: 14px;
   font-weight: 400;
-  font-family: $monospace-fonts;
+  // font-family: $monospace-fonts;
   color: $text-color;
   &:hover,
   &:focus {
-    font-family: $monospace-fonts;
+    // font-family: $monospace-fonts;
     text-decoration: none;
     color: $hover-color;
   }
@@ -266,7 +266,7 @@ img {
       color: $heading-color;
       margin-bottom: 0;
       margin-right: auto;
-      font-family: $monospace-fonts;
+      // font-family: $monospace-fonts;
       font-weight: 700;
     }
     .nav-link {
@@ -349,7 +349,7 @@ img {
     color: $heading-color;
     margin-bottom: 0;
     margin-right: auto;
-    font-family: $monospace-fonts;
+    // font-family: $monospace-fonts;
     font-weight: 700;
     padding: 12px 0;
     border-bottom: 2px solid $bg-gray;

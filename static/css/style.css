@@ -50,11 +50,9 @@ a {
   outline: none;
   font-size: 14px;
   font-weight: 400;
-  font-family: "JetBrains Mono";
   color: #555;
 }
 a:hover, a:focus {
-  font-family: "JetBrains Mono";
   text-decoration: none;
   color: #0057a7;
 }
@@ -267,7 +265,6 @@ img {
   color: #000000;
   margin-bottom: 0;
   margin-right: auto;
-  font-family: "JetBrains Mono";
   font-weight: 700;
 }
 .catagory-area .nav-tabs .nav-link {
@@ -358,7 +355,6 @@ img {
   color: #000000;
   margin-bottom: 0;
   margin-right: auto;
-  font-family: "JetBrains Mono";
   font-weight: 700;
   padding: 12px 0;
   border-bottom: 2px solid #f1f1f1;
